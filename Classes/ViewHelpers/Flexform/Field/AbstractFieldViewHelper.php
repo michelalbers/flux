@@ -115,7 +115,7 @@ abstract class Tx_Flux_ViewHelpers_Flexform_Field_AbstractFieldViewHelper extend
 		} elseif (TRUE === isset($this->arguments['default'])) {
 			$defaultValue = $this->arguments['default'];
 		}
-		return array(
+		$config = array(
 			'name' => $this->arguments['name'],
 			'transform' => $this->arguments['transform'],
 			'label' => $this->arguments['label'],
@@ -133,6 +133,7 @@ abstract class Tx_Flux_ViewHelpers_Flexform_Field_AbstractFieldViewHelper extend
 			'section' => $sectionName,
 			'sectionObjectName' => $sectionObjectName,
 		);
+		return $config;
 	}
 
 	/**
